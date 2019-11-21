@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Playground - JavaScript 101</title>
-    <link rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container text-center">
-    <!-- Button exercise recap on DOM & EVENTS -->
-      <a href="#" class="btn btn-primary" id="click-me" style="margin: 20px">bonjour!</a>
-    <!--  -->
+<head>
+  <meta charset="UTF-8">
+  <title>Playground - JavaScript 101</title>
+  <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container text-center">
+  <h2>SELECT2.JS</h2>
+    <select class="select2" name="country">
+      <option value="berl">Berlin</option>
+      <option value="Ams">Amsterdam</option>
+      <option value="Bcn">Barna</option>
+    </select>
 
-    <!-- HTTP & AJAX -->
-      <form  id="search-form">
-        <h2>Fancy a movie?</h2>
-        <input type="text" id="input-user" placeholder="type a movie">
-        <input type="submit">
-      </form>
-      <ul class="results list-inline" ></ul>
-    </div>
-    <!--  -->
-    <script src="main.js"></script>
-  </body>
+  <h2 style="margin-top: 30px">MARKDOWN.JS</h2>
+
+    <textarea class="form-control" id="editor" rows="4"></textarea>
+    <div id="preview"></div>
+
+
+    <form  id="search-form">
+      <h2>Fancy a movie?</h2>
+      <input type="text" id="input-user" placeholder="type a movie">
+      <input type="submit">
+    </form>
+    <!-- id results is used for fetchMovies and also sortable.ks -->
+    <ul class=" list-inline" id="results"></ul>
+  </div>
+  <!--  -->
+  <script src="main.js"></script>
+</body>
 </html>
