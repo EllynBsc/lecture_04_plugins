@@ -12,22 +12,23 @@
         });
       };
 
+  const toJSON = (response) => response.json()
 
-      const fetchMovies = (query) => {
+  const fetchMovies = (query) => {
         fetch(`https://www.omdbapi.com/?s=${query.value}&apikey=d4b9c62c`)
-          .then(response => response.json())
+          .then(toJSON)
           .then( data => {
            insertMovieToDom(data);
           });
       }
 
 
-      const submitCallback = (event) => {
-        const userInput = document.getElementById('input-user')
-        event.preventDefault();
-        result.innerHTML = '';
-        fetchMovies(userInput);
-      }
+  const submitCallback = (event) => {
+    const userInput = document.getElementById('input-user')
+    event.preventDefault();
+    result.innerHTML = '';
+    fetchMovies(userInput);
+  }
 
 
 // 2. EXPORT FUNCTION/FUNCTIONS
