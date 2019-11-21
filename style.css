@@ -1,0 +1,11 @@
+.small-img {
+  width: 50px;
+}
+
+.results {
+  display: flex;
+}
+
+li {
+  margin: 5px;
+}
